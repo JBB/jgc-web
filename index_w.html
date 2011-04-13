@@ -52,19 +52,28 @@
     <header>
     	<div id="navbar">
     	  <a href="/"><img src="images/index/logo.png" /></a>
-          <div id="cse" class="nav_search">Loading</div>
-          <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+
+          <script type="text/javascript" src="//www.google.com/jsapi"></script>
           <script type="text/javascript">
-            google.load('search', '1', {language : 'en'});
+            google.load('search', '1');
             google.setOnLoadCallback(function() {
-            var customSearchControl = new google.search.CustomSearchControl('014221189792540735175:beufblrgl0a');
-            customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-            var options = new google.search.DrawOptions();
-            options.setAutoComplete(true);
-            customSearchControl.draw('cse', options);
-            }, true);
+              google.search.CustomSearchControl.attachAutoCompletion(
+                '014221189792540735175:beufblrgl0a',
+                document.getElementById('q'),
+                'cse-search-box');
+            });
           </script>
-          </div>
+          <form action="http://jgc.stanford.edu/search.html" id="cse-search-box">
+            <div>
+              <input type="hidden" name="cx" value="014221189792540735175:beufblrgl0a" />
+              <input type="hidden" name="cof" value="FORID:9" />
+              <input type="hidden" name="ie" value="UTF-8" />
+              <input type="text" name="q" id="q" autocomplete="off" size="20" />
+              <input type="submit" name="sa" value="Search" />
+            </div>
+          </form>
+          <script type="text/javascript" src="//www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+        </div>
     </header>
 
     <div id="sub_menu">
