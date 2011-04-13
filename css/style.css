@@ -439,13 +439,22 @@ body {
 					margin-left: -1px;
 					overflow-y: hidden;
 				}
+				div.feature_last {
+					width: 239px;
+					height: 200px;
+					float: left;
+					border: 1px solid #666;
+					margin-left: -1px;
+                                        margin-right: -5px;
+					overflow-y: hidden;
+				}
 				
 					div.feature_title {
 						background-image: url('../images/index/feature_title.png');
 						height: 36px;
 						background-repeat: repeat-x;
 						background-position: 0px -2px;
-						text-transform: lowercase;
+						/*text-transform: lowercase;*/
 						text-shadow: 0px 1px #fff;
 						font-size: 18px;
 						padding: 3px 0px 0px 20px;
@@ -501,9 +510,9 @@ body {
 						}
 						
 						div#jfk_quote {
-							background-image: url('../images/index/jfk.png');
+							background-image: url('../images/index/JohnWGardner.jpg');
 							background-repeat: no-repeat;
-							background-position-y: -15px;
+							/*background-position-y: -15px;*/
 							height: 170px;
 							position: relative;
 							top: -7px;
@@ -511,16 +520,20 @@ body {
 						}
 						
 							div#jfk_quote span {
-								background-color: #ffd247;
-								font-size: 16px;
+								/*background-color: #ffd247;*/
+                                                                width: 60px;
+								font-size: 10px;
+                                                                font-style: italic;
+                                                                float: right;
 								color: black;
-								text-shadow: 0px 2px #ffe491;
-								padding: 0px 15px 0px 5px;
-								border: 1px solid #ffe491;
-								margin: 30px 0px 0px 20px;
-								-moz-box-shadow: 0px 5px 5px #000; 		/* FF3.5+ */
-	  							-webkit-box-shadow: 0px 5px 5px #000; 	/* Saf3.0+, Chrome */
-	        					box-shadow: 0px 5px 5px #000; 			/* Opera 10.5, IE9 */
+								text-shadow: 0px 2px #cccccc;
+                                                                margin-right: 5px;
+								/*padding: 0px 15px 0px 5px;*/
+								/*border: 1px solid #ffe491;*/
+								/*margin: 60px 0px 60px 20px;*/
+								/*-moz-box-shadow: 0px 5px 5px #000; 		/* FF3.5+ */
+	  							/*-webkit-box-shadow: 0px 5px 5px #000; 	/* Saf3.0+, Chrome */
+	        					/*box-shadow: 0px 5px 5px #000;*/ 			/* Opera 10.5, IE9 */
 	        					opacity: .9;            			   	/* Standard style for transparency */
 	    						-moz-opacity: .9;       			   	/* Transparency for older Mozillas */
 	    						filter: alpha(opacity=90); 				/* Transparency for IE */
