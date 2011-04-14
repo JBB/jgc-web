@@ -489,6 +489,9 @@ body {
 							background-position: 40% left;
 							padding-left: 24px;
 						}
+                                                a#get_involved {
+                                                  text-decoration: none;
+                                                }
 						
 					div.feature_text {
 						padding: 0px 20px 0px 20px;
@@ -516,13 +519,13 @@ body {
 							height: 170px;
 							position: relative;
 							top: -7px;
-							padding-top: 20px;
+							padding-top: 10px;
 						}
 						
 							div#jfk_quote span {
 								/*background-color: #ffd247;*/
-                                                                width: 60px;
-								font-size: 10px;
+                                                                width: 65px;
+								font-size: 11px;
                                                                 font-style: italic;
                                                                 float: right;
 								color: black;
@@ -537,19 +540,45 @@ body {
 	        					opacity: .9;            			   	/* Standard style for transparency */
 	    						-moz-opacity: .9;       			   	/* Transparency for older Mozillas */
 	    						filter: alpha(opacity=90); 				/* Transparency for IE */
-	    					}
+	    					        }
+
 	    					
 	    					div#jfk_quote a {
 	    						text-decoration: none;
 	    					}
 
-		
 		footer {
 			
 		}
+
+                div.footer {
+                  border-top: 1px solid #DDDDDD;
+                  clear: both;
+                  padding-top: 9px;
+                  width: 100%;
+                  color: #ffffff;
+                  text-align: left;
+                  margin: 18px auto 0;
+                }
+                ul {
+                      list-style: none outside none;
+                }
+                li.footer {
+                  display: inline;
+                }
+                .piped a.first {
+                  display: block;
+                  padding: 0 0 0 1.5em;
+                  border-left: 0 none !important;
+                  margin-left: 0 !important;
+                }
 	
-	
-	
+                ul.piped a {
+                  border-left: 1px solid #D0D0D0;
+                  margin-left: 1.5em;
+                  padding: 0 0 0 1.5em;
+                }
+}
 	
 /*Google custom search engine (CSE)*/
 
