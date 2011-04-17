@@ -524,7 +524,7 @@ body {
 						
 							div#jfk_quote span {
 								/*background-color: #ffd247;*/
-                                                                width: 65px;
+                                                                width: 70px;
 								font-size: 11px;
                                                                 font-style: italic;
                                                                 float: right;
@@ -553,7 +553,11 @@ body {
                 p.footer {
                   float: left;
                   margin: 18px 0 9px 3px;
+                  color: #ffffff;
                   /*width: 52%;*/
+                }
+                span.left_footer_text {
+                  float: left;
                 }
 
                 div.footer {
@@ -575,10 +579,17 @@ body {
                   border-left: 1px solid #D0D0D0;
                   margin-left: 1.5em;
                   padding: 0 0 0 1.5em;
+                  float: left;
+                }
+                ul.piped_right a {
+                  border-left: 1px solid #D0D0D0;
+                  margin-left: 1.5em;
+                  margin-top: 1.5em;
+                  padding: 0 0 0 1.5em;
                   float: right;
                 }
 
-                ul.piped a.first {
+                ul.piped ul.piped_right a.first {
                   /*display: block;*/
                   padding: 0 0 0 1.5em;
                   border-left: 0 none !important;
