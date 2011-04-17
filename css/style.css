@@ -595,8 +595,9 @@ body {
                   border-left: 0 none !important;
                   margin-left: 0 !important;
                 }
-}
-	
+                a.footer:hover, a.footer:visited, a.footer:active {color: #EDE8DD;}
+                a.footer {color: #C2B7A1;}
+                
 /*Google custom search engine (CSE)*/
 
 /**
