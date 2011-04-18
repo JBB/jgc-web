@@ -31,8 +31,8 @@
   <link rel="shortcut icon" href="favicon.ico">
 
   <!-- CSS : implied media="all" -->
-  <link rel="stylesheet" href="css/style.css?v=300">
-  <link rel="stylesheet" href="css/superfish.css">
+  <link rel="stylesheet" href="css/style_x.css?v=300">
+  <link rel="stylesheet" href="css/superfish_x.css">
 
   <!-- Uncomment if you are specifically targeting less enabled mobile browsers
   <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
@@ -54,34 +54,33 @@
 <body>
 
   <div id="container">
-    <header>
-    	<div id="navbar">
-    	  <a href="/"><img src="images/index/logo.png" /></a>
+      <div id="navbar">
+        <br>
+      </div>
 
-          <script type="text/javascript" src="//www.google.com/jsapi"></script>
-          <script type="text/javascript">
-            google.load('search', '1');
-            google.setOnLoadCallback(function() {
-              google.search.CustomSearchControl.attachAutoCompletion(
-                '014221189792540735175:beufblrgl0a',
-                document.getElementById('q'),
-                'cse-search-box');
-            });
-          </script>
-          <form action="http://jgc.stanford.edu/search.html" id="cse-search-box">
-            <div>
-              <input type="hidden" name="cx" value="014221189792540735175:beufblrgl0a" />
-              <input type="hidden" name="cof" value="FORID:9" />
-              <input type="hidden" name="ie" value="UTF-8" />
-              <input type="text" name="q" id="q" autocomplete="off" size="12" />
-              <input type="submit" name="sa" value="Search" />
-            </div>
-          </form>
-          <script type="text/javascript" src="//www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
-        </div>
-    </header>
 
     <div id="sub_menu">
+      <script type="text/javascript" src="//www.google.com/jsapi"></script>
+      <script type="text/javascript">
+        google.load('search', '1');
+        google.setOnLoadCallback(function() {
+          google.search.CustomSearchControl.attachAutoCompletion(
+            '014221189792540735175:beufblrgl0a',
+            document.getElementById('q'),
+            'cse-search-box');
+        });
+      </script>
+      <form action="http://jgc.stanford.edu/search.html" id="cse-search-box">
+        <div>
+          <input type="hidden" name="cx" value="014221189792540735175:beufblrgl0a" />
+          <input type="hidden" name="cof" value="FORID:9" />
+          <input type="hidden" name="ie" value="UTF-8" />
+          <input type="text" name="q" id="q" autocomplete="off" size="12" />
+          <input type="submit" name="sa" value="Search" />
+        </div>
+      </form>
+      <script type="text/javascript" src="//www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+
       <ul class="sf-menu">
         <li class="current">
           <a href="#a">About JGC</a>
@@ -251,15 +250,21 @@
 			</div>
                  <!--end of features, now footer-->
                  <br clear="all">
-                 <p class="footer">
-                 <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="jgc.stanford.edu" layout="button_count" show_faces="false" width="90" font=""></fb:like>
-                 <a href="http://twitter.com/share?via=gardnercenter&amp;text=The non-profit Gardner Center at Stanford does great work in the field of youth development.&amp;url=http%3A%2F%2Fjgc.stanford.edu" class="twitter-share-button" data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-                 </p>
-                 <ul class="piped_right">
-                   <li class="footer"><a href="#" class="footer">Contact Us</a></li>
-                   <li class="footer"><a href="#" class="footer">Jobs</a></li>
-                   <li class="footer"><a href="#" id="first" class="footer">About JGC</a></li>
-                 </ul>
+                 <div class="footer_top">
+                   <ul class="plugins">
+                     <li class="plugin">
+                       <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="jgc.stanford.edu" layout="button_count" show_faces="false" width="90" font=""></fb:like>
+                     </li>
+                     <li class=plugin>
+                       <a href="http://twitter.com/share?via=gardnercenter&amp;text=The non-profit Gardner Center at Stanford does great work in the field of youth development.&amp;url=http%3A%2F%2Fjgc.stanford.edu" class="twitter-share-button" data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                     </li>
+                   </ul>
+                   <ul class="piped_right">
+                     <li class="footer"><a href="#" class="footer">Contact Us</a></li>
+                     <li class="footer"><a href="#" class="footer">Jobs</a></li>
+                     <li class="footer"><a href="#" id="first" class="footer">About JGC</a></li>
+                   </ul>
+                 </div>
                   
                  <div class="footer">
                    <span class="left_footer_text"> 
