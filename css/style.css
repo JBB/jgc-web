@@ -589,8 +589,13 @@ body {
                   float: right;
                 }
 
-                ul.piped ul.piped_right a.first {
+                ul.piped ul.piped_right {
                   /*display: block;*/
+                  padding: 0 0 0 1.5em;
+                  border-left: 0 none !important;
+                  margin-left: 0 !important;
+                }
+                a#first {
                   padding: 0 0 0 1.5em;
                   border-left: 0 none !important;
                   margin-left: 0 !important;

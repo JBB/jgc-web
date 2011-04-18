@@ -1,2 +1,6 @@
-	border-top:		1px solid #770000; /*#CFDEFF; JBB*/
-	padding: 		.75em 1em;
+                ul.piped ul.piped_right a.first {
+                  /*display: block;*/
+                  padding: 0 0 0 1.5em;
+                  border-left: 0 none !important;
+                  margin-left: 0 !important;
+                }
