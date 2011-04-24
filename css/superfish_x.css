@@ -1,10 +1,5 @@
 
 /*** ESSENTIAL STYLES ***/
-#top-level-1 {
-  font-size:  150%; /* JBB */
-  height:     50px;
-  width:      200px;
-}
 
 .sf-menu, .sf-menu * {
 	margin:			0;
@@ -65,7 +60,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 .sf-menu a {
 	/*border-left:	1px solid #fff; JBB */
-	border-top:		1px solid #770000; /*#CFDEFF; JBB*/
+	/*border-top:		1px solid #770000; /*#CFDEFF; JBB*/
 	padding: 		.75em 1em;
 	text-decoration:none;
 }
@@ -75,6 +70,9 @@ ul.sf-menu li li li.sfHover ul {
 }
 .sf-menu li {
 	background:		#990000; /*#BDD2FF; JBB*/
+}
+.sf-menu li li a {
+	border-top:		1px solid #770000; /*JBB, added this here to prevent top level line*/
 }
 .sf-menu li li {
 	background:		#990011; /*#AABDE6; JBB */

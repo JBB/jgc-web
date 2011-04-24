@@ -550,11 +550,13 @@ body {
 		footer {
 			
 		}
-                p.footer {
-                  float: left;
-                  margin: 18px 0 9px 3px;
+
+                div.footer_top {
+                  margin: 12px 0 9px 3px;
                   color: #ffffff;
-                  /*width: 52%;*/
+                  width: 100%;
+                  /*margin: 18px auto 0;
+                  width: 52%;*/
                 }
                 span.left_footer_text {
                   float: left;
@@ -584,17 +586,26 @@ body {
                 ul.piped_right a {
                   border-left: 1px solid #D0D0D0;
                   margin-left: 1.5em;
-                  margin-top: 2.0em;
+                  margin-top: 7px;
+                  margin-bottom: 9px;
                   padding: 0 0 0 1.5em;
                   float: right;
                 }
+                ul.plugins {
+                  list-style: none;
+                  float: left;
+                }
+                li.plugin {
+                  display: inline;
+                  vertical-align: top;
+                }
 
-                ul.piped ul.piped_right {
-                  /*display: block;*/
+                /*ul.piped ul.piped_right {
+                  /*display: block;
                   padding: 0 0 0 1.5em;
                   border-left: 0 none !important;
                   margin-left: 0 !important;
-                }
+                }*/
                 a#first {
                   padding: 0 0 0 1.5em;
                   border-left: 0 none !important;
@@ -602,10 +613,8 @@ body {
                 }
                 a.footer:hover, a.footer:visited, a.footer:active {color: #EDE8DD;}
                 a.footer {color: #C2B7A1;}
-
-                p#involved { 
-                  text-decoration: underline;
-                 }                
+               
+                p#involved { text-decoration: underline; } 
 /*Google custom search engine (CSE)*/
 
 /**

@@ -340,6 +340,15 @@ body {
                         left: 121px;
 			margin: 0 auto;*/
 		}
+                img#home_logo {
+                        float: left;
+                        height: 34px;
+			/*background-image: url('../images/jgc_logo_105x54.png');*/
+			/*background-repeat: repeat-x;
+			position: relative;
+			z-index: 2;*/
+		
+		}
 		div#main {
 			background: white;
 			width: 960px;

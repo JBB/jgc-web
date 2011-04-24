@@ -65,7 +65,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 .sf-menu a {
 	/*border-left:	1px solid #fff; JBB */
-	border-top:		1px solid #770000; /*#CFDEFF; JBB*/
+	/*border-top:		1px solid #770000; /*#CFDEFF; JBB*/
 	padding: 		.75em 1em;
 	text-decoration:none;
 }
@@ -78,6 +78,9 @@ ul.sf-menu li li li.sfHover ul {
 }
 .sf-menu li li {
 	background:		#990011; /*#AABDE6; JBB */
+}
+.sf-menu li li a{
+	border-top:		1px solid #770000; /*Added it here to keep smooth line across top*/
 }
 .sf-menu li li li {
 	background:		#990022; /*#9AAEDB; JBB */
