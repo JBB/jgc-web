@@ -436,7 +436,7 @@ body {
 				height: 200px;
 				position: relative;
 				top: -1px;
-				background-color: #ffffff;/*#dadada;*/
+				background-color: #dadada;
 				margin-bottom: 200px;
 			}
 			
@@ -451,7 +451,6 @@ body {
 				div.feature_last {
 					width: 239px;
 					height: 200px;
-				        background-color: #ffffff;
 					float: left;
 					border: 1px solid #666;
 					margin-left: -1px;
@@ -523,7 +522,7 @@ body {
 						}
 						
 						div#jfk_quote {
-							background-image: url('../images/get-involved-button.jpg');
+							background-image: url('../images/index/JohnWGardner.jpg');
 							background-repeat: no-repeat;
 							/*background-position-y: -15px;*/
 							height: 170px;
@@ -531,13 +530,6 @@ body {
 							top: -7px;
 							padding-top: 10px;
 						}
-                                                img#get_involved_graphic {
-                                                  width: 160px;
-                                                  height: 160px;
-                                                  display: block;
-                                                  margin-left: auto;
-                                                  margin-right: auto;
-                                                }
 						
 							div#jfk_quote span {
 								/*background-color: #ffd247;*/

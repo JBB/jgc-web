@@ -441,7 +441,7 @@ body {
 			}
 			
 				div.feature {
-					width: 239px;
+					width: 319px;
 					height: 200px;
 					float: left;
 					border: 1px solid #666;
@@ -449,7 +449,7 @@ body {
 					overflow-y: hidden;
 				}
 				div.feature_last {
-					width: 239px;
+					width: 319px;
 					height: 200px;
 				        background-color: #ffffff;
 					float: left;
