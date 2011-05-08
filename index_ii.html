@@ -40,8 +40,8 @@ document.createElement("article" );
   <link rel="shortcut icon" href="favicon.ico">
 
   <!-- CSS : implied media="all" -->
-  <link rel="stylesheet" href="css/style_z.css?v=300">
-  <link rel="stylesheet" href="css/superfish.css">
+  <link rel="stylesheet" href="css/style_ee.css?v=300">
+  <link rel="stylesheet" href="css/superfish_ee.css">
 
   <!-- Uncomment if you are specifically targeting less enabled mobile browsers
   <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
@@ -63,34 +63,34 @@ document.createElement("article" );
 <body>
 
   <div id="container">
-    <header>
-    	<div id="navbar">
-    	  <a href="/"><img src="images/index/logo.png" /></a>
+      <div id="navbar">
+        <br>
+      </div>
 
-          <script type="text/javascript" src="//www.google.com/jsapi"></script>
-          <script type="text/javascript">
-            google.load('search', '1');
-            google.setOnLoadCallback(function() {
-              google.search.CustomSearchControl.attachAutoCompletion(
-                '014221189792540735175:beufblrgl0a',
-                document.getElementById('q'),
-                'cse-search-box');
-            });
-          </script>
-          <form action="http://jgc.stanford.edu/search.html" id="cse-search-box">
-            <div>
-              <input type="hidden" name="cx" value="014221189792540735175:beufblrgl0a" />
-              <input type="hidden" name="cof" value="FORID:9" />
-              <input type="hidden" name="ie" value="UTF-8" />
-              <input type="text" name="q" id="q" autocomplete="off" size="12" />
-              <input type="submit" name="sa" value="Search" />
-            </div>
-          </form>
-          <script type="text/javascript" src="//www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
-        </div>
-    </header>
 
     <div id="sub_menu">
+      <img id="home_logo" src="images/jgc_logo_105x54.png">
+      <script type="text/javascript" src="//www.google.com/jsapi"></script>
+      <script type="text/javascript">
+        google.load('search', '1');
+        google.setOnLoadCallback(function() {
+          google.search.CustomSearchControl.attachAutoCompletion(
+            '014221189792540735175:beufblrgl0a',
+            document.getElementById('q'),
+            'cse-search-box');
+        });
+      </script>
+      <form action="http://jgc.stanford.edu/search.html" id="cse-search-box">
+        <div>
+          <input type="hidden" name="cx" value="014221189792540735175:beufblrgl0a" />
+          <input type="hidden" name="cof" value="FORID:9" />
+          <input type="hidden" name="ie" value="UTF-8" />
+          <input type="text" name="q" id="q" autocomplete="off" size="12" />
+          <input type="submit" name="sa" value="Search" />
+        </div>
+      </form>
+      <script type="text/javascript" src="//www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+
       <ul class="sf-menu">
         <li class="current">
           <a href="#a">About JGC</a>
@@ -115,41 +115,69 @@ document.createElement("article" );
           </ul>
         </li>
         <li>
-          <a href="#a">Community Partnership</a>
+          <a href="#a">Issues In Focus</a>
           <ul>
             <li>
-              <a href="#aa">Philosophy</a>
+              <a href="#aa">Quick Facts</a>
             </li>
             <li class="current">
-              <a href="#ab">Partner Communities</a>
+              <a href="#ab">Top Issues</a>
               <ul>
-                <li class="current"><a href="#">Redwood City</a></li>
-                <li><a href="#aba">East Palo Alto</a></li>
-                <li><a href="#abb">Menlo Park</a></li>
-                <li><a href="#abb">San Francisco</a></li>
-                <li><a href="#abb">San Jose</a></li>
+                <li class="current"><a href="#">Initiative 1</a></li>
+                <li><a href="#aba">Initiative 2</a></li>
+                <li><a href="#abb">Initiative 3</a></li>
+                <li><a href="#abb">Initiative 4</a></li>
+              </ul>
+            </li>
+            <li class="current">
+              <a href="#ab">All Issues</a>
+              <ul>
+                <li class="current"><a href="#">Initiative 5</a></li>
+                <li><a href="#aba">Initiative 6</a></li>
+                <li><a href="#abb">Initiative 7</a></li>
+                <li><a href="#abb">Browse complete archives</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#aa">Search all JGC Work</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Data</a>
+          <ul>
+            <li class="current">
+              <a href="#ab">Aggregated, Anonymous Data</a>
+              <ul>
+                <li class="current"><a href="#">Category 1</a></li>
+                <li><a href="#aba">Category 2</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#ab">Visualization</a>
+              <ul>
+                <li class="current"><a href="#">EPA mapping of community resources</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#ab">Collaborate</a>
+              <ul>
+                <li class="current"><a href="#">Request Data Access</a></li>
               </ul>
             </li>
           </ul>
         </li>
         <li>
-          <a href="#">Research</a>
+          <a href="#">Make a Difference</a>
           <ul>
-            <li>
-              <a href="#aa">Browse all research</a>
-            </li>
-            <li>
-              <a href="#aa">Advanced Search</a>
-            </li>
             <li class="current">
-              <a href="#ab">Youth Data Archive</a>
-              <ul>
-                <li class="current"><a href="#">About YDA</a></li>
-                <li><a href="#aba">Featured Findings</a></li>
-                <li><a href="#aba">San Francisco</a></li>
-                <li><a href="#aba">Playworks</a></li>
-                <li><a href="#abb">EPA Organizations</a></li>
-              </ul>
+              <a href="#ab">Influence Policy</a>
+            </li>
+            <li>
+              <a href="#ab">Spread the Word</a>
+            </li>
+            <li>
+              <a href="#ab">Improve Programs in Your Area</a>
             </li>
           </ul>
         </li>
@@ -265,7 +293,6 @@ document.createElement("article" );
 			</div>
                  <!--end of features, now footer-->
                  <br clear="all">
-                  
                  <div class="footer_top">
                    <ul class="plugins">
                      <li class="plugin">
@@ -281,7 +308,7 @@ document.createElement("article" );
                      <li class="footer"><a href="#" id="first" class="footer">About JGC</a></li>
                    </ul>
                  </div>
-                 
+                  
                  <div class="footer">
                    <span class="left_footer_text"> 
                    Copyright &copy 2011 John W Gardner Center at Stanford University. All rights reserved.</span> 
