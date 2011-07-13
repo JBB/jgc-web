@@ -1,0 +1,281 @@
+<!doctype html>  
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ --> 
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+  <!-- CSS : implied media="all" -->
+  <link rel="stylesheet" href="css/style.css?v=300">
+  <link rel="stylesheet" href="css/superfish.css">
+
+  <!-- Uncomment if you are specifically targeting less enabled mobile browsers
+  <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
+ 
+  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+  <script src="js/libs/jquery-1.5.1.js"></script>
+  <script src="js/libs/hoverIntent.js"></script>
+  <script src="js/libs/superfish.js"></script>
+  <script type="text/javascript">
+
+  //initialise plugins
+  jQuery(function(){
+    jQuery('ul.sf-menu').superfish();
+  });
+
+  </script>
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+    	<div id="navbar">
+    	  <a href="/"><img src="images/index/logo.png" /></a>
+          <div id="cse" class="nav_search">Loading</div>
+          <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+          <script type="text/javascript">
+            google.load('search', '1', {language : 'en'});
+            google.setOnLoadCallback(function() {
+            var customSearchControl = new google.search.CustomSearchControl('014221189792540735175:beufblrgl0a');
+            customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+            var options = new google.search.DrawOptions();
+            options.setAutoComplete(true);
+            customSearchControl.draw('cse', options);
+            }, true);
+          </script>
+          </div>
+    </header>
+
+    <div id="sub_menu">
+      <ul class="sf-menu">
+        <li class="current">
+          <a href="#a">About JGC</a>
+          <ul>
+            <li>
+              <a href="#aa">Mission</a>
+            </li>
+            <li class="current">
+              <a href="#ab">Team</a>
+            </li>
+            <li>
+              <a href="#aa">Jobs</a>
+              <ul>
+                <li class="current"><a href="#">Research</a></li>
+                <li><a href="#aba">Volunteer</a></li>
+                <li><a href="#abb">Internships</a></li>
+              </ul>
+            </li>
+            <li class="current">
+              <a href="#ab">Contact</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#a">Community Partnership</a>
+          <ul>
+            <li>
+              <a href="#aa">Philosophy</a>
+            </li>
+            <li class="current">
+              <a href="#ab">Partner Communities</a>
+              <ul>
+                <li class="current"><a href="#">Redwood City</a></li>
+                <li><a href="#aba">East Palo Alto</a></li>
+                <li><a href="#abb">Menlo Park</a></li>
+                <li><a href="#abb">San Francisco</a></li>
+                <li><a href="#abb">San Jose</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Research</a>
+          <ul>
+            <li>
+              <a href="#aa">Browse all research</a>
+            </li>
+            <li>
+              <a href="#aa">Advanced Search</a>
+            </li>
+            <li class="current">
+              <a href="#ab">Youth Data Archive</a>
+              <ul>
+                <li class="current"><a href="#">About YDA</a></li>
+                <li><a href="#aba">Featured Findings</a></li>
+                <li><a href="#aba">San Francisco</a></li>
+                <li><a href="#aba">Playworks</a></li>
+                <li><a href="#abb">EPA Organizations</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <br clear=all>
+
+    <div id="main">
+		<div id="carousel">
+			<div class="slide" id="slide_1">
+				<div class="slide_quote">
+					<span>
+					        JGC partners with <br>
+						communities to develop <br>
+						leadership, conduct <br>
+						research, and effect <br>
+						change to improve the <br>
+						lives of youth.
+					</span>
+				</div>
+				<!--
+				<div class="slide_read_more">
+					<a href="#">
+						read more &raquo;
+					</a>
+				</div>
+				-->
+			</div>
+			<!-- you might imagine these div.slide repeating, and being hidden/shown by a script -->
+			<!-- use read more div above if going to do carousel -->
+		</div>
+		<div id="features">
+			<div class="feature">
+				<div class="feature_title">
+					<span id="research">
+						Featured Research
+					</span>
+				</div>
+				<div class="feature_text">
+					&nbsp;<br>
+					<ul class="pdf">
+						<li><a href="#">How to Save Children &raquo;</a></li>
+						<li><a href="#">Leadership in Kindergarten &raquo;</a></li>
+						<li><a href="#">Babysitters: Friends or Foes? &raquo;</a></li>
+						<li><a href="#">Parents: They Were Kids Too, Once &raquo;</a></li>
+					</ul>
+					&nbsp;<br>
+					<p>
+						<a href="#">More...</a>
+					</p>
+				</div>
+			</div>
+			<div class="feature">
+				<div class="feature_title">
+					<span id="highlight">
+						Community Highlight
+					</span>
+				</div>
+				<div class="feature_text">
+					<p>
+						&nbsp;<br>
+						Our Redwood City partner, X, did this really neat thing
+					</p>
+					<p>
+						<a href="#">More...</a>
+					</p>
+				</div>
+			</div>
+			<div class="feature">
+				<div class="feature_title">
+					<span id="blog">
+					        Director's Blog	
+					</span>
+				</div>
+				<div class="feature_text">
+					<p>
+						&nbsp;<br>
+						We work together...
+					</p>
+					<p>
+						<a href="#">More...</a>
+					</p>
+				</div>
+			</div>
+			<div class="feature">
+				<div class="feature_title">
+					<span id="get_involved">
+						Get Involved
+					</span>
+				</div>
+				<div id="jfk_quote">
+					<a href="#">
+						<span>
+							learn how you can get
+						</span>
+						<br>
+						<span>
+							involved with a project
+						</span>
+						<br>
+						<span>
+							for your community, or
+						</span>
+						<br>
+						<span>
+							support the work of
+						</span>
+						<br>
+						<span>
+							those who do
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+    </div>
+    
+    <footer>
+
+    </footer>
+  </div> <!--! end of #container -->
+
+
+  <!-- Javascript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery. fall back to local if necessary
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.4.2.js"%3E%3C/script%3E'))</script>
+   -->
+  
+  <!-- scripts concatenated and minified via ant build script-->
+  <!-- end concatenated and minified scripts-->
+  
+  
+  <!--[if lt IE 7 ]>
+    <script src="js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
+  <![endif]-->
+
+  <!-- yui profiler and profileviewer - remove for production
+  <script src="js/profiling/yahoo-profiling.min.js"></script>
+  <script src="js/profiling/config.js"></script>
+   -->
+  <!-- end profiling code -->
+
+
+  <!-- asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet 
+       change the UA-XXXXX-X to be your site's ID -->
+  
+</body>
+</html>

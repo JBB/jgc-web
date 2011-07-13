@@ -1,6 +1,15 @@
 <!doctype html>  
 
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ --> 
+<!--[if lt IE 9]>
+<script type="text/javascript" >
+document.createElement("nav" );
+document.createElement("header" );
+document.createElement("footer" );
+document.createElement("section" );
+document.createElement("aside" );
+document.createElement("article" );
+</script>
+<![endif]-->
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
@@ -12,21 +21,26 @@
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
        Remove this if you use the .htaccess -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <!--FB plugin meta info-->
+  <meta property="og:title" content="John W Gardner Center for Youth, Stanford University">
+  <meta property="og:type" content="non_profit">
+  <meta property="og:image" content="http://jgc.stanford.edu/images/jgc_logo_105x54.png">
+  <meta property="og:url" content="http://jgc.stanford.edu">
+  <meta property="og:site_name" content="JGC">
+  <meta property="fb:admins" content="605843081" />
 
-  <title></title>
-  <meta name="description" content="">
+  <title>John W Gardner Center for Youth</title>
+  <meta name="description" content="The John W. Gardner Center for Youth and Their Communities at Stanford University partners with communities to develop leadership, conduct research, and effect change to improve the lives of youth.">
   <meta name="author" content="">
 
   <!--  Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
+  <link rel="shortcut icon" href="favicon.ico">
 
   <!-- CSS : implied media="all" -->
-  <link rel="stylesheet" href="css/style.css?v=300">
+  <link rel="stylesheet" href="css/style1.css?v=300">
   <link rel="stylesheet" href="css/superfish.css">
 
   <!-- Uncomment if you are specifically targeting less enabled mobile browsers
@@ -52,19 +66,28 @@
     <header>
     	<div id="navbar">
     	  <a href="/"><img src="images/index/logo.png" /></a>
-          <div id="cse" class="nav_search">Loading</div>
-          <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+
+          <script type="text/javascript" src="//www.google.com/jsapi"></script>
           <script type="text/javascript">
-            google.load('search', '1', {language : 'en'});
+            google.load('search', '1');
             google.setOnLoadCallback(function() {
-            var customSearchControl = new google.search.CustomSearchControl('014221189792540735175:beufblrgl0a');
-            customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-            var options = new google.search.DrawOptions();
-            options.setAutoComplete(true);
-            customSearchControl.draw('cse', options);
-            }, true);
+              google.search.CustomSearchControl.attachAutoCompletion(
+                '014221189792540735175:beufblrgl0a',
+                document.getElementById('q'),
+                'cse-search-box');
+            });
           </script>
-          </div>
+          <form action="http://jgc.stanford.edu/search.html" id="cse-search-box">
+            <div>
+              <input type="hidden" name="cx" value="014221189792540735175:beufblrgl0a" />
+              <input type="hidden" name="cof" value="FORID:9" />
+              <input type="hidden" name="ie" value="UTF-8" />
+              <input type="text" name="q" id="q" autocomplete="off" size="12" />
+              <input type="submit" name="sa" value="Search" />
+            </div>
+          </form>
+          <script type="text/javascript" src="//www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+        </div>
     </header>
 
     <div id="sub_menu">
@@ -76,13 +99,17 @@
               <a href="#aa">Mission</a>
             </li>
             <li class="current">
+              <a href="#ab">Principals</a>
+            </li>
+            <li class="current">
               <a href="#ab">Team</a>
             </li>
             <li>
               <a href="#aa">Jobs</a>
               <ul>
-                <li class="current"><a href="#">Research</a></li>
-                <li><a href="#aba">Volunteer</a></li>
+                <li class="current"><a href="#">Volunteer</a></li>
+                <li><a href="#aba">Paid part time</a></li>
+                <li><a href="#aba">Paid full time</a></li>
                 <li><a href="#abb">Internships</a></li>
               </ul>
             </li>
@@ -92,19 +119,28 @@
           </ul>
         </li>
         <li>
-          <a href="#a">Community Partnership</a>
+          <a href="#a">Community Partners</a>
           <ul>
             <li>
-              <a href="#aa">Philosophy</a>
-            </li>
-            <li class="current">
-              <a href="#ab">Partner Communities</a>
+              <a href="#aa">Partners</a>
               <ul>
                 <li class="current"><a href="#">Redwood City</a></li>
                 <li><a href="#aba">East Palo Alto</a></li>
                 <li><a href="#abb">Menlo Park</a></li>
                 <li><a href="#abb">San Francisco</a></li>
                 <li><a href="#abb">San Jose</a></li>
+              </ul>
+            </li>
+            <li class="current">
+              <a href="#ab">Programs</a>
+            </li>
+            <li class="current">
+              <a href="#ab">Resources</a>
+              <ul>
+                <li class="current"><a href="#">Toolkits</a></li>
+                <li><a href="#aba">Presentations</a></li>
+                <li><a href="#abb">Links</a></li>
+                <li><a href="#abb">Legacy Materials</a></li>
               </ul>
             </li>
           </ul>
@@ -130,10 +166,21 @@
             </li>
           </ul>
         </li>
+        <li>
+          <a href="#">Stanford</a>
+          <ul>
+            <li>
+              <a href="#aa">Faculty Leadership</a>
+            </li>
+            <li>
+              <a href="#aa">Student Involvement</a>
+            </li>
+          </ul>
+        </li>
       </ul>
     </div>
 
-    <br clear=all>
+    <br clear="all">
 
     <div id="main">
 		<div id="carousel">
@@ -141,11 +188,11 @@
 				<div class="slide_quote">
 					<span>
 					        JGC partners with <br>
-						communities to develop <br>
-						leadership, conduct <br>
-						research, and effect <br>
-						change to improve the <br>
-						lives of youth.
+						&nbsp;&nbsp;communities to develop <br>
+						&nbsp;&nbsp;leadership, conduct <br>
+						&nbsp;&nbsp;research, and effect <br>
+						&nbsp;&nbsp;change to improve the <br>
+						&nbsp;&nbsp;lives of youth.
 					</span>
 				</div>
 				<!--
@@ -163,7 +210,7 @@
 			<div class="feature">
 				<div class="feature_title">
 					<span id="research">
-						Featured Research
+						Featured Publications
 					</span>
 				</div>
 				<div class="feature_text">
@@ -199,7 +246,7 @@
 			<div class="feature">
 				<div class="feature_title">
 					<span id="blog">
-					        Director's Blog	
+					        JGC Blog	
 					</span>
 				</div>
 				<div class="feature_text">
@@ -208,46 +255,65 @@
 						We work together...
 					</p>
 					<p>
-						<a href="#">More...</a>
+						<a href="http://gardnercenter.wordpress.com">More...</a>
+					</p>
+					<p>
+						<a href="http://www.twitter.com/gardnercenter">
+                                                <img src="images/index/follow_on_twitter.png"> 
+                                                Follow on Twitter</a>
 					</p>
 				</div>
 			</div>
-			<div class="feature">
+			<div class="feature_last">
 				<div class="feature_title">
 					<span id="get_involved">
-						Get Involved
+					  <a href="#" id="get_involved">Resources</a>
 					</span>
 				</div>
-				<div id="jfk_quote">
-					<a href="#">
-						<span>
-							learn how you can get
-						</span>
-						<br>
-						<span>
-							involved with a project
-						</span>
-						<br>
-						<span>
-							for your community, or
-						</span>
-						<br>
-						<span>
-							support the work of
-						</span>
-						<br>
-						<span>
-							those who do
-						</span>
-					</a>
+				<div class="feature_text">
+					<p>
+						&nbsp;<br>
+						A very helpful program description<br>
+					</p>
+					<p>
+						<a href="http://jgcnet.stanford.edu">Map of EPA comunity programs</a>
+					</p>
 				</div>
 			</div>
-		</div>
+                 <!--end of features, now footer-->
+                 <br clear="all">
+                  
+                 <div class="footer_top">
+                   <ul class="plugins">
+                     <li class="plugin">
+                       <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="jgc.stanford.edu" layout="button_count" show_faces="false" width="90" font="" send="true" class="fb-like"></fb:like>
+                     </li>
+                     <li class=plugin>
+                       <a href="http://twitter.com/share?via=gardnercenter&amp;text=The non-profit Gardner Center at Stanford does great work in the field of youth development.&amp;url=http%3A%2F%2Fjgc.stanford.edu" class="twitter-share-button" data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                     </li>
+                   </ul>
+                   <ul class="piped_right">
+                     <li class="footer"><a href="#" class="footer">Contact Us</a></li>
+                     <li class="footer"><a href="#" class="footer">Jobs</a></li>
+                     <li class="footer"><a href="#" id="first" class="footer">About JGC</a></li>
+                   </ul>
+                 </div>
+                 
+                 <div class="footer">
+                   <span class="left_footer_text"> 
+                   Copyright &copy 2011 John W Gardner Center at Stanford University. All rights reserved.</span> 
+                   <ul class="piped">
+                     <li class="footer"><a href="#" id="first" class="footer">Terms of use</a></li>
+                     <li class="footer"><a href="#" class="footer">Privacy policy</a></li>
+                   </ul>
+                </div>
+	 </div>
+      <footer>
+
+      </footer>
+
     </div>
     
-    <footer>
-
-    </footer>
   </div> <!--! end of #container -->
 
 
@@ -277,5 +343,20 @@
   <!-- asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet 
        change the UA-XXXXX-X to be your site's ID -->
   
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4880637-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + 
+'.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
 </body>
 </html>
