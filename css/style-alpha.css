@@ -1,0 +1,834 @@
+/* 
+  HTML5 ✰ Boilerplate 
+  
+  style.css contains a reset, font normalization and some base styles.
+  
+  credit is left where credit is due.
+  much inspiration was taken from these projects:
+    yui.yahooapis.com/2.8.1/build/base/base.css
+    camendesign.com/design/
+    praegnanz.de/weblog/htmlcssjs-kickstart
+*/
+
+/* 
+  html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+  v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
+  html5doctor.com/html-5-reset-stylesheet/
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}                  
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { 
+    display:block;
+}
+
+nav ul { list-style:none; }
+
+blockquote, q { quotes:none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
+
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom:1px dotted; cursor:help; }
+
+/* tables still need cellspacing="0" in the markup */
+table { border-collapse:collapse; border-spacing:0; }
+
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+
+input, select { vertical-align:middle; }
+
+/* END RESET CSS */
+
+
+/* fonts.css from the YUI Library: developer.yahoo.com/yui/
+   Refer to developer.yahoo.com/yui/3/cssfonts/ for font sizing percentages
+
+  There are three custom edits:
+   * remove arial, helvetica from explicit font stack
+   * we normalize monospace styles ourselves
+   * table font-size is reset in the HTML5 reset above so there is no need to repeat
+*/
+body { font:13px/1.231 sans-serif; *font-size:small; } /* hack retained to preserve specificity */
+
+select, input, textarea, button { font:99% sans-serif; }
+
+/* normalize monospace sizing 
+ * en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome
+ */
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+ 
+
+/* 
+ * minimal base styles 
+ */
+
+
+body, select, input, textarea { 
+  /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */ 
+  color: #444; 
+  /* set your base font here, to apply evenly */
+  /* font-family: Georgia, serif;  */   
+}
+
+/* Headers (h1,h2,etc) have no default font-size or margin,
+   you'll want to define those yourself. */ 
+h1,h2,h3,h4,h5,h6 { font-weight: bold; }
+
+/* always force a scrollbar in non-IE */ 
+html { overflow-y: scroll; }
+
+ 
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: none; }
+
+a, a:active, a:visited { color: #607890; }
+a:hover { color: #036; }
+
+
+ul, ol { margin-left: 1.8em; }
+ol { list-style-type: decimal; }
+
+/* Remove margins for navigation lists */
+nav ul, nav li { margin: 0; } 
+
+small { font-size: 85%; }
+strong, th { font-weight: bold; }
+
+td, td img { vertical-align: top; } 
+
+sub { vertical-align: sub; font-size: smaller; }
+sup { vertical-align: super; font-size: smaller; }
+
+pre { 
+  padding: 15px; 
+  
+  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+  white-space: pre; /* CSS2 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word; /* IE */
+}
+ 
+textarea { overflow: auto; } /* thnx ivannikolic! www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
+
+.ie6 legend, .ie7 legend { margin-left: -7px; } /* thnx ivannikolic! */
+
+/* align checkboxes, radios, text inputs with their label
+   by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+
+/* hand cursor on clickable input elements */
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+ 
+/* webkit browsers add a 2px margin outside the chrome of form elements */  
+button, input, select, textarea { margin: 0; }
+
+/* colors for form validity */
+input:valid, textarea:valid   {  }
+input:invalid, textarea:invalid { 
+      border-radius: 1px;
+    -moz-box-shadow: 0px 0px 5px red; 
+ -webkit-box-shadow: 0px 0px 5px red; 
+         box-shadow: 0px 0px 5px red;
+}
+.no-boxshadow input:invalid, 
+.no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+
+/* These selection declarations have to be separate.
+   No text-shadow: twitter.com/miketaylr/status/12228805301 
+   Also: hot pink. */
+::-moz-selection{ background: #990000; color:#fff; text-shadow: none; }
+::selection { background:#990000; color:#fff; text-shadow: none; } 
+
+/*  j.mp/webkit-tap-highlight-color */
+a:link { -webkit-tap-highlight-color: #FF5E99; } 
+
+/* make buttons play nice in IE:    
+   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+button {  width: auto; overflow: visible; }
+ 
+/* bicubic resizing for non-native sized IMG: 
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+
+
+/* 
+ * Non-semantic helper classes 
+ */
+
+/* for image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+
+/* Hide for both screenreaders and browsers
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display: none; visibility: hidden; } 
+
+/* Hide only visually, but have it available for screenreaders 
+   www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden  */
+.visuallyhidden { position: absolute !important;    
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px); }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* >> The Magnificent CLEARFIX: Updated to prevent margin-collapsing on child elements << j.mp/bestclearfix */
+.clearfix:before, .clearfix:after {
+  content: "\0020"; display: block; height: 0; visibility: hidden;	
+} 
+
+.clearfix:after { clear: both; }
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix { zoom: 1; }
+
+
+
+
+
+
+ /* Primary Styles
+    Author: Rob Ryan (Hackathon, 2011)
+ */
+
+@font-face {
+    font-family: 'NewsGothic';
+    src: url('../fonts/newsgot-webfont.eot?') format('eot'),
+         url('../fonts/newsgot-webfont.woff') format('woff'),
+         url('../fonts/newsgot-webfont.ttf') format('truetype'),
+         url('../fonts/newsgot-webfont.svg#webfont1Ou0dJp0') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'NewsGothic';
+    src: url('../fonts/news_gothic_mt_bold-webfont.eot?') format('eot'),
+         url('../fonts/news_gothic_mt_bold-webfont.woff') format('woff'),
+         url('../fonts/news_gothic_mt_bold-webfont.ttf') format('truetype'),
+         url('../fonts/news_gothic_mt_bold-webfont.svg#webfontw2sLBejI') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'NewsGothic';
+    src: url('../fonts/news_gothic_mt_italic-webfont.eot?') format('eot'),
+         url('../fonts/news_gothic_mt_italic-webfont.woff') format('woff'),
+         url('../fonts/news_gothic_mt_italic-webfont.ttf') format('truetype'),
+         url('../fonts/news_gothic_mt_italic-webfont.svg#webfontYiDDOKVq') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+body {
+	background-color: #333333;
+	background-image: url('../images/index/bg.png');
+	font-family: 'NewsGothic', NewsGothic, 'NewsGothicMT', Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+	div#container {
+		width: 100%;
+		padding-bottom: 200px;
+	}
+	
+		header {
+			background-image: url('../images/index/header_bg.png');
+			background-repeat: repeat-x;
+			height: 85px;
+                        width: 960px;
+                        margin: 0 auto;
+			/*position: relative;
+			z-index: 2;*/
+		}
+		
+			div#navbar {
+				width: 960px;
+				margin: 0 auto;
+			}
+			
+				#navbar img {
+					margin-right: -10px;
+				}
+
+				div.nav_search {
+					width: 225px;
+                                        /*position: absolute;*/
+                                        float: right;
+                                        padding-left: 15px;
+                                        padding-top: 25px;
+                                        padding-right: 15px;
+				}
+				
+				div.nav_item{
+					width: 300px;
+					float: right;
+					text-align: center;
+					position: relative;
+					margin-left: -1px;
+					height: 55px;
+					padding-top: 25px;
+				}
+					
+					div.nav_item:hover {
+						background-color: #990000;
+						border: 1px solid black;
+						color: lightgrey;
+					}
+					
+					div.nav_item a:active {
+						color: darkgray;
+					}
+				
+					div.nav_item a {
+						font-size: 24px;
+						text-shadow: 0px 2px #000;
+						color: white;
+						text-decoration: none;
+						width: 100%;
+						height: 100%;
+						display: block;
+					}
+				
+				div#about_us {
+					width: 170px;
+				}
+			
+		div#sub_menu {
+			background: #990000;
+			width: 960px;
+                        height: 33px;
+			margin: 0 auto;
+			position: relative;
+                        /*position: relative;
+			background: #990000;
+			width: 960px;
+                        left: 121px;
+			margin: 0 auto;*/
+		}
+		div#main {
+			background: white;
+			width: 960px;
+			height: 600px;
+			margin: 0 auto;
+			position: relative;
+                        top: -15px;
+		}
+		
+			div#carousel {
+				height: 420px;
+			}
+			
+				div.slide {
+					overflow-y: hidden;
+					background-repeat: no-repeat;
+					height: 100%;
+				}
+				
+				div#slide_1 {
+					background-image: url('../images/index/mural_home.jpg');
+				}
+				
+					div.slide_quote {
+						width: 400px;
+						margin-left: 660px;
+						position: relative;
+						top: 220px;
+					}
+					
+						div.slide_quote span {
+							background-color: none; /*#ffd247;*/
+							font-size: 24px;
+                                                        font-style: italic;
+                                                        
+							color: #ffffff; /*770000;*/
+							/*text-shadow: 0px 2px #ffe491; */
+							padding: 0px 15px 0px 15px;
+							border: none; /*1px solid #ffe491;*/
+					/*		-moz-box-shadow: 0px 5px 5px #000; 		/* FF3.5+ */
+  				/*			-webkit-box-shadow: 0px 5px 5px #000; 	/* Saf3.0+, Chrome */
+        				/*	box-shadow: 0px 5px 5px #000; 			/* Opera 10.5, IE9 */
+        			/*		opacity: .9;            			   	/* Standard style for transparency */
+    					/*	-moz-opacity: .9; */       			   	/* Transparency for older Mozillas */
+    					/*	filter: alpha(opacity=90);*/ 				/* Transparency for IE */
+						}
+						
+					div.slide_read_more {
+						width: 180px;
+						height: 45px;
+						margin-left: 60px;
+						position: relative;
+						top: 70px;
+						text-align: center;
+						border: 1px solid #555555;
+						background: black;
+						-moz-box-shadow: 0px 5px 5px #000; 		/* FF3.5+ */
+  						-webkit-box-shadow: 0px 5px 5px #000; 	/* Saf3.0+, Chrome */
+        				box-shadow: 0px 5px 5px #000; 			/* Opera 10.5, IE9 */
+					}
+					
+						div.slide_read_more:hover {
+							border-color: darkgrey;	
+						}
+						
+						div.slide_read_more a:active {
+							color: lightgrey;
+							background-color: #131313;
+						}
+					
+						div.slide_read_more a {
+							display: block;
+							width: 100%;
+							height: 100%;
+							font-variant: small-caps;
+							text-transform: lowercase;
+							color: white;
+							text-shadow: 0px 1px darkgrey;
+							font-size: 36px;
+							text-decoration: none;
+						}
+						
+			div#features {
+				width: 100%;
+				height: 200px;
+				position: relative;
+				top: -1px;
+				background-color: #dadada;
+				margin-bottom: 200px;
+			}
+			
+				div.feature {
+					width: 239px;
+					height: 200px;
+					float: left;
+					border: 1px solid #666;
+					margin-left: -1px;
+					overflow-y: hidden;
+				}
+				div.feature_last {
+					width: 239px;
+					height: 200px;
+					float: left;
+					border: 1px solid #666;
+					margin-left: -1px;
+                                        margin-right: -5px;
+					overflow-y: hidden;
+				}
+				
+					div.feature_title {
+						background-image: url('../images/index/feature_title.png');
+						height: 36px;
+						background-repeat: repeat-x;
+						background-position: 0px -2px;
+						/*text-transform: lowercase;*/
+						text-shadow: 0px 1px #fff;
+						font-size: 18px;
+						padding: 3px 0px 0px 20px;
+						position: relative;
+						z-index: 2;
+					}
+					
+						span#research {
+							background-image: url('../images/icons/document-attribute-f.png');
+							background-repeat: no-repeat;
+							background-position: 40% left;
+							padding-left: 24px;
+						}
+						
+						span#highlight {
+							background-image: url('../images/icons/star.png');
+							background-repeat: no-repeat;
+							background-position: 40% left;
+							padding-left: 24px;
+						}
+
+						span#blog {
+							background-image: url('../images/icons/quill.png');
+							background-repeat: no-repeat;
+							background-position: 40% left;
+							padding-left: 24px;
+						}
+						
+						span#get_involved {
+							background-image: url('../images/icons/hand.png');
+							background-repeat: no-repeat;
+							background-position: 40% left;
+							padding-left: 24px;
+						}
+                                                a#get_involved {
+                                                  text-decoration: none;
+                                                }
+						
+					div.feature_text {
+						padding: 0px 20px 0px 20px;
+						text-shadow: 0px 1px white;
+					}
+					
+						div.feature_text p{
+							font-size: 16px;
+							text-shadow: 0px 1px white;
+							padding: 5px 0px 10px 0px;
+						}
+						
+						ul.pdf {
+							list-style-image: url('../images/icons/document-pdf.png');
+						}
+						
+						ul.data {
+							list-style-image: url('../images/icons/document-table.png');
+						}
+						
+						div#jfk_quote {
+							background-image: url('../images/index/JohnWGardner.jpg');
+							background-repeat: no-repeat;
+							/*background-position-y: -15px;*/
+							height: 170px;
+							position: relative;
+							top: -7px;
+							padding-top: 10px;
+						}
+						
+							div#jfk_quote span {
+								/*background-color: #ffd247;*/
+                                                                width: 70px;
+								font-size: 11px;
+                                                                font-style: italic;
+                                                                float: right;
+								color: black;
+								text-shadow: 0px 2px #cccccc;
+                                                                margin-right: 5px;
+								/*padding: 0px 15px 0px 5px;*/
+								/*border: 1px solid #ffe491;*/
+								/*margin: 60px 0px 60px 20px;*/
+								/*-moz-box-shadow: 0px 5px 5px #000; 		/* FF3.5+ */
+	  							/*-webkit-box-shadow: 0px 5px 5px #000; 	/* Saf3.0+, Chrome */
+	        					/*box-shadow: 0px 5px 5px #000;*/ 			/* Opera 10.5, IE9 */
+	        					opacity: .9;            			   	/* Standard style for transparency */
+	    						-moz-opacity: .9;       			   	/* Transparency for older Mozillas */
+	    						filter: alpha(opacity=90); 				/* Transparency for IE */
+	    					        }
+
+	    					
+	    					div#jfk_quote a {
+	    						text-decoration: none;
+	    					}
+
+		footer {
+			
+		}
+
+                div.footer_top {
+                  margin: 12px 0 9px 3px;
+                  color: #ffffff;
+                  width: 100%;
+                  /*margin: 18px auto 0;
+                  width: 52%;*/
+                }
+                span.left_footer_text {
+                  float: left;
+                  color: darkgray;
+                }
+
+                div.footer {
+                  border-top: 1px solid #DDDDDD;
+                  clear: both;
+                  padding-top: 9px;
+                  width: 100%;
+                  color: #ffffff;
+                  text-align: left;
+                  margin: 18px auto 0;
+                }
+
+                li.footer {
+                  display: inline;
+		  font-size: 12px;
+                }
+	
+                ul.piped a {
+                  border-left: 1px solid #D0D0D0;
+                  margin-left: 1.5em;
+                  padding: 0 0 0 1.5em;
+                  float: left;
+                }
+                ul.piped_right a {
+                  border-left: 1px solid #D0D0D0;
+                  margin-left: 1.5em;
+                  margin-top: 7px;
+                  margin-bottom: 9px;
+                  margin-right: 9px;
+                  padding: 0 0 0 1.5em;
+                  float: right;
+                }
+                ul.plugins {
+                  list-style: none;
+                  float: left;
+                }
+                li.plugin {
+                  display: inline;
+                  vertical-align: top;
+                }
+                .fb-like {
+                  vertical-align: top;
+                }
+
+                /*ul.piped ul.piped_right {
+                  /*display: block;
+                  padding: 0 0 0 1.5em;
+                  border-left: 0 none !important;
+                  margin-left: 0 !important;
+                }*/
+                a#first {
+                  padding: 0 0 0 1.5em;
+                  border-left: 0 none !important;
+                  margin-left: 0 !important;
+                }
+                a.footer:hover, a.footer:visited, a.footer:active {color: #EDE8DD;}
+                a.footer {color: #C2B7A1;}
+               
+                p#involved { text-decoration: underline; } 
+/*Google custom search engine (CSE)*/
+
+/**
+ * Default theme
+ *
+ */
+/* Slight reset to make the preview have ample padding. */
+.cse .gsc-control-cse,
+.gsc-control-cse {
+  padding: 2%;
+  width: 96%;
+}
+.cse .gsc-branding,
+.gsc-branding {
+  display: none;
+}
+.cse .gsc-control-cse div,
+.gsc-control-cse div {
+  position: normal;
+}
+/* Selector for entire element. */
+.cse .gsc-control-cse,
+.gsc-control-cse {
+  background-color: none;
+  /*background-color: #990000;
+  border: 1px solid;
+  border-color: #ffffff;*/
+}
+.cse .gsc-control-cse:after,
+.gsc-control-cse:after {
+  content:".";
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+}
+.cse .gsc-resultsHeader,
+.gsc-resultsHeader {
+  border: block;
+}
+/* Search button */
+.cse input.gsc-search-button,
+input.gsc-search-button {
+  font-family: inherit;
+  color: #000000;
+  text-shadow: 0 1px 2px #FFFFFF;
+  background-color: #CECECE;
+  border: 1px outset;
+  border-color: #666666;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+/* Inactive tab */
+.cse .gsc-tabHeader.gsc-tabhInactive,
+.gsc-tabHeader.gsc-tabhInactive {
+  border-bottom: none;
+  color: #666666;
+  background-color: #e9e9e9;
+  border: 1px solid;
+  border-color: #e9e9e9;
+  border-bottom: none;
+}
+/* Active tab */
+.cse .gsc-tabHeader.gsc-tabhActive,
+.gsc-tabHeader.gsc-tabhActive {
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-top: 2px solid;
+  border-color: #e9e9e9;
+  border-top-color: #FF9900;
+  border-bottom: none;
+}
+/* This is the tab bar bottom border. */
+.cse .gsc-tabsArea,
+.gsc-tabsArea {
+  margin-top: 1em;
+  border-bottom: 1px solid #e9e9e9;
+}
+/* Inner wrapper for a result */
+.cse .gsc-webResult.gsc-result,
+.gsc-webResult.gsc-result {
+  padding: .25em;
+  border: 1px solid;
+  border-color: #ffffff;
+  margin-bottom: 1em;
+}
+/* Result hover event styling */
+.cse .gsc-webResult.gsc-result:hover,
+.gsc-webResult.gsc-result:hover {
+  border: 1px solid;
+  border-color: #FFFFFF;
+}
+/*Promotion Settings*/
+/* The entire promo */
+.cse .gs-promotion.gs-result,
+.gs-promotion.gs-result {
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-color: #336699;
+}
+/* Promotion image */
+.cse .gs-promotion.gs-result .gs-promotion-image,
+.gs-promotion.gs-result .gs-promotion-image {}
+/* Promotion title */
+.cse .gs-promotion.gs-result a.gs-title:link,
+.gs-promotion.gs-result a.gs-title:link {
+  color: #0000CC;
+}
+.cse .gs-promotion.gs-result a.gs-title:visited,
+.gs-promotion.gs-result a.gs-title:visited {
+  color: #0000CC;
+}
+.cse .gs-promotion.gs-result a.gs-title:hover,
+.gs-promotion.gs-result a.gs-title:hover {
+  color: #0000CC;
+}
+.cse .gs-promotion.gs-result a.gs-title:active,
+.gs-promotion.gs-result a.gs-title:active {
+  color: #0000CC;
+}
+/* Promotion snippet */
+.cse .gs-promotion.gs-result .gs-snippet,
+.gs-promotion.gs-result .gs-snippet {
+  color: #000000;
+}
+/* Promotion url */
+.cse .gs-promotion.gs-result .gs-visibleUrl,
+.gs-promotion.gs-result .gs-visibleUrl {
+  color: #008000;
+}
+/* Style for auto-completion table
+ * .gsc-completion-selected : styling for a suggested query which the user has moused-over
+ * .gsc-completion-container : styling for the table which contains the completions
+ */
+.gsc-completion-selected {
+  background: #D5E2FF;
+}
+.gsc-completion-container {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  position: absolute;
+  background: white;
+  border: 1px solid #666666;
+  margin-left: 0;
+  margin-right: 0;
+  /* The top, left, and width are set in JavaScript. */
+}
+
+/* Full URL */
+div.gs-result.gs-webResult .gs-visibleUrl-short {
+  display: none;
+}
+div.gs-result.gs-webResult .gs-visibleUrl-long {
+  display: block;
+}
+
+
+/* end Google custom search engine */
+
+form#cse-search-box {
+  float: right;
+  padding-left: 15px;
+  padding-top: 25px;
+  padding-right: 15px;
+}
+
+/*
+ * Media queries for responsive design
+ * These follow after primary styles so they will successfully override. 
+ */
+
+@media all and (orientation:portrait) { 
+  /* Style adjustments for portrait mode goes here */
+  
+}
+
+@media all and (orientation:landscape) { 
+  /* Style adjustments for landscape mode goes here */
+  
+}
+
+/* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)  
+   Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px) {
+  
+  
+  /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you
+     j.mp/textsizeadjust 
+  html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+}
+
+/* 
+ * print styles
+ * inlined to avoid required HTTP connection www.phpied.com/delay-loading-your-print-css/ 
+ */
+@media print {
+  * { background: transparent !important; color: #444 !important; text-shadow: none !important; }
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a:after { content: " (" attr(href) ")"; } 
+  abbr:after { content: " (" attr(title) ")"; }
+  .ir a:after { content: ""; }  /* Don't show links for images */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */ 
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
+
